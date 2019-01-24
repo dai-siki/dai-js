@@ -34,7 +34,7 @@ export function curryN (fn, n = null) {
 }
 
 export function curry (fn) {
-	curryN(fn);
+	return curryN(fn);
 }
 
 /**

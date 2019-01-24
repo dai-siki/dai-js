@@ -1,5 +1,3 @@
-var $ = require('jquery');
-
 /**
  * 当滚动条超过容器高度时切换css类（如：固定位置）
  *
@@ -7,7 +5,7 @@ var $ = require('jquery');
  * @param onClassName 超过时添加的类名
  * @param offClassName 默认类名
  */
-module.exports = function (selector, onClassName, offClassName) {
+export default function (selector, onClassName, offClassName) {
 	selector = selector ? selector : ".mytoolbar";
 	onClassName = onClassName ? onClassName : "";
 	offClassName = offClassName ? offClassName : "";
