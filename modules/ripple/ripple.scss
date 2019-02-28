@@ -10,6 +10,7 @@
 	opacity: 1;
 	perspective: 1000;
 	backface-visibility: hidden;
+
 	&.z-active {
 		opacity: 0;
 		transform: scale(2);
