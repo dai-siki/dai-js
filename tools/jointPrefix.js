@@ -1,12 +1,12 @@
 /**
- * 给字符串加前缀
+ * 给字符串加统一前缀
  *
  * @type signature
  * String a -> String b -> String c
  * String a -> [String b] -> [String c]
  * String a -> {x: String b} -> {x: String c}
  */
-export default (pre, url) => {
+export default function jointPrefix(pre, url) {
 	if (typeof url === 'object') {
 		Object.keys(url).forEach((k) => {
 			url[k] = jointPrefix(pre, url[k]);
