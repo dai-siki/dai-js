@@ -7,7 +7,7 @@ import shuffle from './shuffle';
  * (number: 3) => string: dz1
  */
 export default function getRandomString(n = 20) {
-	const srcStr = '0123456789~!@#$%^&*(abcdefghijklmnopqrstuvwxyz,./<>?;:{}[]=+-ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	const srcStr = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	let str = shuffle(srcStr);
 	let len = str.length;
 	if (typeof n != 'number' || n <= 0) {
