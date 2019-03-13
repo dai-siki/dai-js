@@ -85,6 +85,10 @@ var _log = __webpack_require__(8);
 
 var _log2 = _interopRequireDefault(_log);
 
+var _getRandomString = __webpack_require__(9);
+
+var _getRandomString2 = _interopRequireDefault(_getRandomString);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _log2.default)('123455');
@@ -93,6 +97,8 @@ _message2.default.success('我是给弄你飞机偶尔就饿哦偶尔就偶分�
 		_message2.default.error('4567');
 	});
 });
+(0, _log2.default)((0, _getRandomString2.default)(5));
+(0, _log2.default)((0, _getRandomString2.default)(1000));
 
 /***/ }),
 /* 2 */
@@ -221,7 +227,7 @@ exports = module.exports = __webpack_require__(5)(false);
 
 
 // module
-exports.push([module.i, "@keyframes j-msg-a1 {\n  0% {\n    transform: scale(1.4);\n    opacity: 0; }\n  100% {\n    transform: scale(1);\n    opacity: 1; } }\n\n.j-msg {\n  position: fixed;\n  z-index: 99998;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: transparent; }\n  .j-msg > div {\n    position: fixed;\n    z-index: 99999;\n    left: 0;\n    right: 0;\n    bottom: 55%;\n    width: 180px;\n    margin: 0 auto;\n    padding: 18px 20px 20px 40px;\n    line-height: 24px;\n    font-size: 14px;\n    vertical-align: middle;\n    text-align: center;\n    background-color: rgba(0, 0, 0, 0.78);\n    color: #fff;\n    animation: j-msg-a1 0.11s ease-out;\n    border-radius: 3px;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3); }\n    .j-msg > div i {\n      position: relative;\n      display: inline-block;\n      top: 4px;\n      margin: 0 6px 0 -30px;\n      width: 18px;\n      height: 18px;\n      border-radius: 100%; }\n    .j-msg > div .btn-close {\n      position: absolute;\n      display: block;\n      top: 2px;\n      right: 2px;\n      width: 20px;\n      height: 20px;\n      color: #fff;\n      text-shadow: 0 1px 4px rgba(255, 255, 255, 0.2);\n      font-size: 18px;\n      transform: rotate(0);\n      transition: transform 0.2s;\n      cursor: pointer; }\n      .j-msg > div .btn-close::after, .j-msg > div .btn-close::before {\n        content: '';\n        position: absolute;\n        top: 9px;\n        left: 4px;\n        width: 13px;\n        height: 2px;\n        background-color: rgba(255, 255, 255, 0.6);\n        transform: rotate(45deg); }\n      .j-msg > div .btn-close::after {\n        transform: rotate(-45deg); }\n      .j-msg > div .btn-close:hover {\n        transform: rotate(90deg); }\n    .j-msg > div.s-lg {\n      width: 280px; }\n    .j-msg > div.z-success i {\n      background-color: rgba(0, 255, 0, 0.7); }\n      .j-msg > div.z-success i::after {\n        content: '';\n        position: absolute;\n        top: 0;\n        bottom: 3px;\n        right: 0;\n        left: 0;\n        margin: auto;\n        width: 8px;\n        height: 6px;\n        border-left: 2px solid rgba(255, 255, 255, 0.95);\n        border-bottom: 2px solid rgba(255, 255, 255, 0.95);\n        transform: rotate(-45deg); }\n    .j-msg > div.z-warning i {\n      background-color: rgba(255, 255, 0, 0.7); }\n      .j-msg > div.z-warning i::after, .j-msg > div.z-warning i::before {\n        content: '';\n        position: absolute;\n        top: 0;\n        bottom: 6px;\n        right: 0;\n        left: 0;\n        margin: auto;\n        width: 3px;\n        height: 7px;\n        background-color: rgba(255, 255, 255, 0.95); }\n      .j-msg > div.z-warning i::after {\n        top: 6px;\n        bottom: 0;\n        height: 3px;\n        transform: rotate(-45deg);\n        border-radius: 3px; }\n    .j-msg > div.z-error i {\n      background-color: rgba(255, 85, 0, 0.75); }\n      .j-msg > div.z-error i::after, .j-msg > div.z-error i::before {\n        content: '';\n        position: absolute;\n        top: 0;\n        bottom: 0;\n        right: 0;\n        left: 0;\n        margin: auto;\n        width: 13px;\n        height: 2px;\n        background-color: rgba(255, 255, 255, 0.95);\n        transform: rotate(45deg); }\n      .j-msg > div.z-error i::after {\n        transform: rotate(-45deg); }\n", ""]);
+exports.push([module.i, "@keyframes j-msg-a1 {\n  0% {\n    transform: scale(1.4);\n    opacity: 0; }\n  100% {\n    transform: scale(1);\n    opacity: 1; } }\n\n.j-msg {\n  position: fixed;\n  z-index: 99998;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: transparent; }\n  .j-msg > div {\n    position: fixed;\n    z-index: 99999;\n    left: 0;\n    right: 0;\n    bottom: 55%;\n    width: 180px;\n    margin: 0 auto;\n    padding: 18px 20px 20px 40px;\n    line-height: 24px;\n    font-size: 14px;\n    vertical-align: middle;\n    text-align: center;\n    background-color: rgba(0, 0, 0, 0.78);\n    color: #fff;\n    animation: j-msg-a1 0.11s ease-out;\n    border-radius: 3px;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3); }\n    .j-msg > div i {\n      position: relative;\n      display: inline-block;\n      top: 4px;\n      margin: 0 6px 0 -30px;\n      width: 18px;\n      height: 18px;\n      border-radius: 100%; }\n    .j-msg > div .btn-close {\n      position: absolute;\n      display: block;\n      top: 2px;\n      right: 2px;\n      width: 20px;\n      height: 20px;\n      color: #fff;\n      text-shadow: 0 1px 4px rgba(255, 255, 255, 0.2);\n      font-size: 18px;\n      transform: rotate(0);\n      transition: transform 0.2s;\n      cursor: pointer; }\n      .j-msg > div .btn-close::after, .j-msg > div .btn-close::before {\n        content: '';\n        position: absolute;\n        top: 9px;\n        left: 4px;\n        width: 13px;\n        height: 2px;\n        background-color: rgba(255, 255, 255, 0.6);\n        transform: rotate(45deg); }\n      .j-msg > div .btn-close::after {\n        transform: rotate(-45deg); }\n      .j-msg > div .btn-close:hover {\n        transform: rotate(90deg); }\n    .j-msg > div.s-lg {\n      width: 280px; }\n    .j-msg > div.z-success i {\n      background-color: rgba(0, 255, 0, 0.7); }\n      .j-msg > div.z-success i::after {\n        content: '';\n        position: absolute;\n        top: 0;\n        bottom: 3px;\n        right: 0;\n        left: 0;\n        margin: auto;\n        width: 8px;\n        height: 6px;\n        border-left: 2px solid rgba(255, 255, 255, 0.95);\n        border-bottom: 2px solid rgba(255, 255, 255, 0.95);\n        transform: rotate(-45deg); }\n    .j-msg > div.z-warning i {\n      background-color: rgba(255, 255, 0, 0.7); }\n      .j-msg > div.z-warning i::after, .j-msg > div.z-warning i::before {\n        content: '';\n        position: absolute;\n        top: 0;\n        bottom: 4px;\n        right: 0;\n        left: 0;\n        margin: auto;\n        width: 3px;\n        height: 7px;\n        background-color: rgba(255, 255, 255, 0.95); }\n      .j-msg > div.z-warning i::after {\n        top: 8px;\n        bottom: 0;\n        height: 3px;\n        transform: rotate(-45deg);\n        border-radius: 3px; }\n    .j-msg > div.z-error i {\n      background-color: rgba(255, 85, 0, 0.75); }\n      .j-msg > div.z-error i::after, .j-msg > div.z-error i::before {\n        content: '';\n        position: absolute;\n        top: 0;\n        bottom: 0;\n        right: 0;\n        left: 0;\n        margin: auto;\n        width: 13px;\n        height: 2px;\n        background-color: rgba(255, 255, 255, 0.95);\n        transform: rotate(45deg); }\n      .j-msg > div.z-error i::after {\n        transform: rotate(-45deg); }\n", ""]);
 
 // exports
 
@@ -835,6 +841,71 @@ exports.default = function (title) {
 	});
 	console.log('--------------------*/');
 	return true;
+};
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = getRandomString;
+
+var _shuffle = __webpack_require__(10);
+
+var _shuffle2 = _interopRequireDefault(_shuffle);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function getRandomString() {
+	var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 20;
+
+	var srcStr = '0123456789~!@#$%^&*(abcdefghijklmnopqrstuvwxyz,./<>?;:{}[]=+-ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	var str = (0, _shuffle2.default)(srcStr);
+	var len = str.length;
+	if (typeof n != 'number' || n <= 0) {
+		return '';
+	} else if (n > len) {
+		return str + getRandomString(n - len);
+	} else {
+		return str.substring(0, n);
+	}
+} /**
+   * 获取n位随机字符串
+   *
+   * 示例：
+   * 3 => dz1
+   */
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+/**
+ * 随机打乱字符串
+ *
+ * 示例：
+ * abcd => dcbd
+ */
+exports.default = function (str) {
+  if (typeof str != 'string' && str !== '') {
+    return str;
+  } else {
+    return str.split('').sort(function () {
+      return Math.random() - 0.5;
+    }).join('');
+  }
 };
 
 /***/ })

@@ -1,4 +1,3 @@
-"use strict";
 import $ from 'jquery';
 
 /*   对象辅助函数

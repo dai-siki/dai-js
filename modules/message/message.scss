@@ -118,7 +118,7 @@
 					content: '';
 					position: absolute;
 					top: 0;
-					bottom: 6px;
+					bottom: 4px;
 					right: 0;
 					left: 0;
 					margin: auto;
@@ -128,7 +128,7 @@
 				}
 
 				&::after {
-					top: 6px;
+					top: 8px;
 					bottom: 0;
 					height: 3px;
 					transform: rotate(-45deg);
