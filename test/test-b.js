@@ -89,6 +89,10 @@ var _getRandomString = __webpack_require__(9);
 
 var _getRandomString2 = _interopRequireDefault(_getRandomString);
 
+var _moneyFormat = __webpack_require__(11);
+
+var _moneyFormat2 = _interopRequireDefault(_moneyFormat);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _log2.default)('123455');
@@ -99,6 +103,10 @@ _message2.default.success('我是给弄你飞机偶尔就饿哦偶尔就偶分�
 });
 (0, _log2.default)((0, _getRandomString2.default)(5));
 (0, _log2.default)((0, _getRandomString2.default)(1000));
+
+// 钱转换测试
+window.moneyFormat = _moneyFormat2.default;
+(0, _log2.default)((0, _moneyFormat2.default)(0.8354321233));
 
 /***/ }),
 /* 2 */
@@ -861,10 +869,16 @@ var _shuffle2 = _interopRequireDefault(_shuffle);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/**
+ * 获取n位随机字符串
+ *
+ * 示例：
+ * (number: 3) => string: dz1
+ */
 function getRandomString() {
 	var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 20;
 
-	var srcStr = '0123456789~!@#$%^&*(abcdefghijklmnopqrstuvwxyz,./<>?;:{}[]=+-ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	var srcStr = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	var str = (0, _shuffle2.default)(srcStr);
 	var len = str.length;
 	if (typeof n != 'number' || n <= 0) {
@@ -874,12 +888,7 @@ function getRandomString() {
 	} else {
 		return str.substring(0, n);
 	}
-} /**
-   * 获取n位随机字符串
-   *
-   * 示例：
-   * 3 => dz1
-   */
+}
 
 /***/ }),
 /* 10 */
@@ -906,6 +915,39 @@ exports.default = function (str) {
       return Math.random() - 0.5;
     }).join('');
   }
+};
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+exports.default = function (number) {
+	if (typeof number == 'undefined' || isNaN(number)) return '--';
+	number = (Math.round(number * 100) / 100).toString();
+	var resultArray = [],
+	    pointPosi = number.indexOf('.'),
+	    // 取得小数点的位置
+	int = pointPosi == -1 ? number : number.substring(0, pointPosi),
+	    // 取得小数中的整数部分
+	float = pointPosi == -1 ? '00' : number.substring(pointPosi + 1, pointPosi + 3),
+	    remainSum = int.length % 3; // 超过 3 的位数
+	if (int.length <= 3) {
+		resultArray = [int];
+	} else if (remainSum == 0) {
+		resultArray = resultArray.concat(int.match(/\d{3}/g));
+	} else {
+		resultArray.push(int.substring(0, remainSum));
+		int = int.substring(remainSum);
+		resultArray = resultArray.concat(int.match(/\d{3}/g));
+	}
+	return resultArray.join(',') + '.' + float;
 };
 
 /***/ })
