@@ -21,5 +21,5 @@ export default (number) => {
 		int = int.substring(remainSum);
 		resultArray = resultArray.concat(int.match(/\d{3}/g));
 	}
-	return resultArray.join(',') + '.' + float;
+	return resultArray.join(',') + '.' + (float + '00').substr(0, 2);
 };
