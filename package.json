@@ -3,6 +3,7 @@
   "version": "0.0.12",
   "description": "封装一些自己常用的js小工具",
   "main": "index.js",
+  "miniprogram": "tools",
   "scripts": {
     "dev": "gulp js",
     "build": "cross-env NODE_ENV=production gulp js"
